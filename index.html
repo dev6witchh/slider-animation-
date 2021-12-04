@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SliderBar for displaying profiles</title>
+</head>
+<body>
+    <div class="hero">
+        <h1>Dogs We Have</h1>
+        <div class="reviewbox">
+            <div class="slide" id="slide">
+                <div class="card">
+                    <div class="profile">
+                        <img src="images/dog1.png" alt="">
+                        <div>
+                            <h3>Dog Name</h3>
+                            <p>Type of Dog Breed</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat ipsa atque labore. Natus alias est c inventore mollitia id blanditii Natus alias est cum,
+                    consectetur illo recusandae rem quaerat inventore mollitia id blanditiiss nihilum, consectetur illo recusandae rem quaerat inventore mollitia id blanditiis nihil eius perspiciatis, laudantium un</p>
+
+                </div>
+                    <div class="card">
+                        <div class="profile">
+                            <img src="images/dog2.png" alt="">
+                            <div>
+                                <h3>Dog Name</h3>
+                                <p>Type of Dog Breed</p>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat ipsa atque labore. Natus alia ullam dolorum nesciunt distinctio, quia delectus laudantium voluptas reiciendis itaque sis est cum,
+                            consectetur illo recusandae rem quaerat inventore mollitia id blanditiis nihil eius perspiciatis, li</p>
+                    
+                    </div>
+                        <div class="card">
+                            <div class="profile">
+                                <img src="images/dog3.png" alt="">
+                                <div>
+                                    <h3>Dog Name</h3>
+                                    <p>Type of Dog Breed</p>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat ipsa atque labore. Natus alias est cum,
+                                consectetur illo recusandae rem quaerat inventore mollitia id blanditii Natus alias est cum,
+                                consectetur illo recusandae rem quaerat inventore mollitia id blanditiiss nihil eius pe</p>
+                        
+                        </div>
+                            <div class="card">
+                                <div class="profile">
+                                    <img src="images/dog4.png" alt="">
+                                    <div>
+                                        <h3>Dog Name</h3>
+                                        <p>Type of Dog Breed</p>
+                                    </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat ipsa atque laborem ducimus unde
+                                    quisquam ullam dolorum nesciunt Magni fugiat ipsa atque labore. Natus alias est cum,
+                                    consectetur illo recusandae rem quaerat inventore mollitia id blanditii Ndistinctio, quia delectus laudantium voluptas reiciendis itaque si</p>
+                            
+                            </div>
+
+            </div>
+            <div class="sidebar">
+                <img src="up-arrow.svg" alt="" id="upArrow">
+                <img src="down-arrow.svg" alt="" id="downArrow">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slide = document.getElementById('slide');
+        var upArrow = document.getElementById('upArrow');
+        var downArrow = document.getElementById('downArrow');
+
+        let x =0;
+        downArrow.onclick = function(){
+
+      if (x > -900) {
+                x = x - 300;
+          slide.style.top = `${x}px`;
+          console.log(x);
+         
+      } 
+        }
+           upArrow.onclick = function () {
+
+                if (x < 0) {
+                    x = x + 300;
+                    slide.style.top = `${x}px`;
+                     console.log(x+300);
+                }
+            }
+    </script>
+</body>
+</html>
